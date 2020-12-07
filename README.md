@@ -25,7 +25,7 @@ javac -d build/classes -cp src/ src/server/ChatServer.java
 Antes de executar o processo, é necessário definir as configurações de segurança. Para isso execute:
 
 ```bash
-rmiregistry.bat
+registro.bat
 ```
 
 Ou executar os comandos separadamente
@@ -33,7 +33,7 @@ Ou executar os comandos separadamente
 cd build\classes
 rmic common.ChatImpl
 
-rmiregistry
+rmiregistry 3000
 ```
 ```diff
 - Importante - 

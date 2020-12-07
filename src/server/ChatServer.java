@@ -14,12 +14,11 @@ public class ChatServer {
             Chat chat = (Chat) new ChatImpl();
             Naming.rebind(ChatImpl.getURI(), (Remote) chat);
         } catch (Exception e){
-            System.out.println("Erro: "+e);
+            System.out.println("Erro: " + e);
         }
     }
     public static void main(String[] args){
         try {
-            
             System.out.println("[Server] Iniciando servidor " + ChatImpl.getURI());
             ChatServer cs = new ChatServer();
         } catch (Exception e) {
