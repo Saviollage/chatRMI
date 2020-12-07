@@ -15,21 +15,15 @@ public class ChatImpl extends UnicastRemoteObject implements Chat {
     public ChatImpl() throws RemoteException {
         super();
     }
-    public Integer sendMessage(String message) throws RemoteException {
+    public void sendMessage(String message) throws RemoteException {
         recivedMessage = message;
         System.out.println(recivedMessage);
         messages.add(recivedMessage);
-        return messages.size() -1;
     }
     public String readMessage() throws RemoteException {
         return recivedMessage;
     }
-    public ArrayList<String> getMessages(Integer index) throws RemoteException {
-        ArrayList<String> aux = new ArrayList<String>();
-        for(Integer i=index; i< messages.size();i++)
-        {
-            aux.add(messages.get(i));
-        }
-        return aux;
+    public ArrayList<String> getMessages() throws RemoteException {
+        return messages;
     }
 }

@@ -1,11 +1,14 @@
 # Chat Using RMI
+<p align="center">
+  <img src="screenshot.jpg" width="600">
 
+  </p>
 Projeto desenvolvido para a disciplina de Sistemas paralelos e distribuídos.
 
 Alunos:
-Brenner Batista
-Sávio Lage
-Vitor Vidal
+- Brenner Batista
+- Sávio Lage
+- Vitor Vidal
 
 ## Compilar projeto
 
