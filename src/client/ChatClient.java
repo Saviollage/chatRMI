@@ -9,14 +9,12 @@ public class ChatClient {
             Chat client = (Chat) Naming.lookup(ChatImpl.getURI());
             Scanner scanner = new Scanner(System.in);
             String message;
-            System.out.println("Olá, bem vindo ao nosso chat, primeiro digite seu nickname: ");
+            System.out.println("Bem vindo ao nosso chat! Primeiro digite seu nickname: ");
             String author = scanner.nextLine();
-            System.out.println("Beleza, " + author + " para começar, digite aqui sua messagem: ");
+            System.out.println("Beleza, " + author + " digite aqui sua messagem: ");
             while (true) {               
-                System.out.println(client.readMessage());
                 message = scanner.nextLine();
                 client.sendMessage(message, author);
-
             }
         } catch (Exception e) {
             System.out.println("Erro: " + e);
